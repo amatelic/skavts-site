@@ -1,0 +1,36 @@
+=style-text($color: black, $font-size: 12px, $font-weight: normal, $text-align: left)
+  color: $color
+  font-size: $font-size
+  font-weight: $font-weight
+  text-align: $text-align
+
+=size($width: 100%, $height: 100%)
+  width: $width
+  height: $height
+
+=skavtBox()
+  border: 2px solid $gray2
+  border-width: 3px 2px 3px 2px
+=skavtBox-hover()
+  &:hover
+    background: $green_1
+    border-color: $gray2
+  &:active
+    background: rgba(48, 101, 105, 1)
+    border-color: $gray2
+    color: $gray
+
+=makeTransition($type: all)
+    transition:  $type 5s
+
+.basic-flex
+  display: flex
+  flex-flow: wrap
+
+.basic-flex-column
+  @extend .basic-flex
+  flex-direction:  column
+
+.basic-flex-row
+  @extend .basic-flex
+  flex-direction:  row

@@ -1,0 +1,145 @@
+
+.skavt-login
+  +skavtBox()
+  @extend .basic-flex-column
+  width: 90%
+  max-height: 0px
+  padding: 5px 10px
+  margin: 0px auto
+  overflow: hidden
+  opacity: 0
+  transition: all 0.5s
+
+.login-user
+  +size(50%, 30px)
+  margin: 10px auto
+
+.basic-flex-column
+  display: flex
+  flex-direction:  column
+  flex-flow: row wrap
+
+//articles
+article.skavt-post
+  @extend .basic-flex-row
+  padding: 10px
+  margin-bottom: 20px
+  border: 5px solid #000
+  // -webkit-transition:  all 5s
+  // transition:  all 5s
+  // .text
+  //   display: none
+.skavt-post-gallery
+  +size()
+  display: none
+  padding: 10px 5px
+  @extend .basic-flex-row
+  justify-content: center
+
+.skavt-post-image
+  margin: 5px
+  border-radius: 4px
+  width: 100px
+
+.greed-12
+  width: 100%
+
+// steg navigation
+.steg_nav
+  list-style-type: none
+  padding: 0
+  margin: 10px 0 0 0
+  @extend .basic-flex-column
+li.steg_nav_li
+  border-bottom-width: 0px
+  width: 80%
+  margin: 0 auto
+  padding-bottom: 5px
+li.steg_nav_li:last-child
+  border-bottom: 2px solid $gray2
+.steg-main
+  width: 100%
+  min-height: 500px
+  text-align: center
+  margin: 60px auto
+  @media #{$PC-1000-min}
+    width: 80%
+
+
+//Voditelj component
+.skavt-info
+  @extend .greed-12
+  @extend .basic-flex-column
+  border-bottom: 2px solid black
+  padding-bottom: 10px
+  margin-bottom: 10px
+.skavt-image
+  +size(45%, 80px)
+  display: flex
+  justify-content: center
+  align-items: center
+  align-self: center
+  img
+    width: 100px
+    height: auto
+    border-radius: 70%
+    border: 4px solid white
+.skavt-user
+  +size(45%, 150px)
+  @extend .basic-flex-column
+  justify-content: center
+  align-items: center
+  align-self: center
+
+.skavt-post-image
+  opacity: 0
+  transform: scale(0)
+  transition: opacity 2s, transform 1s
+
+.skavt-post-image-animation
+  opacity: 1
+  transform: scale(1)
+
+.load-images
+  padding: 10px
+  margin-top: 10px
+  &:disabled
+    opacity: 0.9
+    background: $gray
+//skavt calender
+table.skavti-calender
+  border: 1px solid black
+  width: 170px
+  display: block
+  margin-left: 5px
+  display: block
+  td
+    width: 20px
+    text-align: center
+    padding: 3px
+
+.skavt-circle
+  border: 2px solid #a1a1a1
+  background: $green_1
+
+.modal-skavti
+  position: fixed
+  z-index: 10px
+  width: 50%
+  padding: 5px
+  height: auto
+  top: 30%
+  left: 25%
+  padding: 10px
+  background: $orange
+  text-align: center
+  border: 5px solid black
+  h1, p
+    text-align: center
+
+.black-box
+  top: 0
+  left: 0
+  opacity: 0.3
+  background: black
+  position: fixed

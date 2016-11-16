@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "laravel-elixir-livereload": "^1.1.2"
+  },
+  "dependencies": {
+    "backbone": "^1.2.3",
+    "bootstrap-sass": "^3.0.0",
+    "dropzone": "^4.2.0",
+    "jquery": "^2.1.4",
+    "laravel-elixir": "^3.4.2"
+  }
+}

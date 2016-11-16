@@ -1,0 +1,121 @@
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap"
+@import "basic/helpers"
+@import "basic/color"
+@import "basic/media"
+@import "basic/base"
+@import "basic/components"
+
+header
+  background: url('../images/glava_01.jpg') no-repeat
+  background-size: cover
+  display: flex
+  margin: 0 auto
+  max-width: 1200px
+  height: 270px
+  align-items: flex-end
+
+.ul-header
+  list-style-type: none
+  padding: 0
+  margin: 0
+  width: 100%
+  display: flex
+  flex-direction: row
+
+.main_nav
+  +size(25%, 50px)
+
+.li-header
+  background: $gray
+  border: 2px solid $gray2
+  border-width: 3px 2px 3px 2px
+  +skavtBox-hover()
+  a
+    +style-text($green_2, 14px, bold, center)
+    +size()
+    margin-top: 10px
+    display: block
+    text-decoration: none
+
+
+main
+  margin: 0 auto
+  max-width: 1200px
+  min-height: 800px
+  display: flex
+  background: $orange
+  flex-flow: row wrap
+
+// Media querys
+
+@media #{$Mobile}
+  .ul-header
+    flex-direction: column
+  .li-header
+    +size(100%, 50px)
+
+
+#center
+  width: 100%
+  background: $orange
+  display: flex
+  flex-direction: column
+  justify-content: center
+  flex: 2 1 400px
+  height: 100%
+  padding: 10px 20px
+
+
+#left,#right
+  background: $orange
+  max-width:  180px
+  height: auto
+  flex: 1 1 180px
+
+#right
+  @media #{$MobileAndTablet}
+    display:none
+
+#left
+  // display: flex
+  // flex-direction: column
+  // justify-content: center
+  // @media #{$MobileAndTablet}
+  //  justify-content: flex-start
+
+
+.container
+  margin-top: 70px
+
+.show-text
+  white-space: normal
+  max-height: 300px
+  text-indent: 100%
+// .show
+//   min-height: auto
+
+.add-user
+	display: none
+
+.gallery
+  width: 100%
+  height: 150px
+  background: red
+
+.images-cover
+  min-height: 222px
+  -webkit-box-shadow: 6px 6px 23px -6px rgba(0,0,0,0.75)
+  margin: 10px
+  padding-bottom: 50px
+  img
+    width: 100%
+  &:hover
+    position: relative
+    opacity: 0.5
+    &:before
+      left: 30%
+      top: 20%
+      +size(auto, auto)
+      display: block
+      position: absolute
+      content: url("https://cdn1.iconfinder.com/data/icons/toolbar-signs/512/trash-128.png")
