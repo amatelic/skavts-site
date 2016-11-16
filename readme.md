@@ -23,7 +23,7 @@ factory(App\Article::class, 10)->create();
 factory(App\Notification::class, 10)->create();
 
 ```
-- php artisan key:generate
+- php artisan key:generate(update key in app.php)
 - php artisan serve
 
 User url:
